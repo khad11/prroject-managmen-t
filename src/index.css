@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-item .active {
+    @apply bg-slate-300 py-2 px-4 rounded-tl-xl rounded-bl-xl text-black w-full;
+  }
+}
+/* bg-gradient-to-b from-slate-800 to-slate-600 */
+/* bg-gradient-to-b from-slate-300 to-slate-400 */
