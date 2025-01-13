@@ -93,10 +93,9 @@ function useFirestore(collectionName) {
       dispatchIsNotCanceled({ type: "ADD_DOC", payload: docRef });
       dispatchIsNotCanceled({ type: "SUCCES", payload: true });
     } catch (error) {
-      toast.error(error.code);
       dispatchIsNotCanceled({ type: "ERROR", payload: error.code });
+      toast.error(error.code);
       console.log(error.code);
-      setError(error.code);
     } finally {
       dispatchIsNotCanceled({ type: "IS_PENDING", payload: false });
     }
