@@ -51,28 +51,26 @@ function About() {
   return (
     <div className="grid lg:grid-cols-2 gap-5 p-4">
       {/* Project Info */}
-      <div className="card bg-gradient-to-b from-slate-800 to-slate-600  text-white shadow-lg">
+      <div className="bg-base-200   shadow-lg flex ">
         <div className="card-body space-y-4">
           <h2 className="card-title text-3xl font-semibold uppercase">
             {document.name}
           </h2>
-          <h3 className="text-xl italic text-gray-300">
-            {document.projectType}
-          </h3>
+          <h3 className="text-xl italic ">{document.projectType}</h3>
           <hr />
           <p className="w-full p-4 bg-gray-200 text-black rounded-md mt-2">
             {document.description}
           </p>
           {/* Action Buttons */}
-          <div className="card-actions justify-center gap-8">
+          <div className="card-actions justify-center gap-8 ">
             <button
-              className="py-2 px-6 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition"
+              className="py-2 px-6 bg-success text-white rounded-lg font-medium hover:bg-green-600 transition"
               onClick={() => updateDocument(document.id)}
             >
               Mark as Completed
             </button>
             <button
-              className="py-2 px-6 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition"
+              className="py-2 px-6 bg-error text-white rounded-lg font-medium hover:bg-red-700 transition"
               onClick={() => deleteDocument(document.id)}
             >
               Delete Project
@@ -82,14 +80,14 @@ function About() {
       </div>
 
       {/* Chat Section */}
-      <div className="flex flex-col gap-4 bg-gray-100 p-4 rounded-md shadow-md">
+      <div className="flex flex-col gap-4 bg-base-200 p-4 rounded-md shadow-md justify-between">
         <h2 className="text-3xl font-semibold">Chat</h2>
         {document.comments.length === 0 ? (
           <p className="text-center my-10 italic text-gray-500">
             No comments yet
           </p>
         ) : (
-          <div className="space-y-4 overflow-y-auto max-h-[400px]">
+          <div className="space-y-4 overflow-y-auto max-h-[400px] ">
             {" "}
             {/* Add scroll and limit height */}
             {document.comments.map((comment) => (

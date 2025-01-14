@@ -9,7 +9,7 @@ function Settings() {
   const { user } = useSelector((store) => store.user);
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6 flex flex-col items-center">
+    <div className="min-h-screen bg-base-200 p-6 flex flex-col items-center ">
       <div className="relative w-full max-w-4xl">
         <div className="h-[200px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl shadow-lg"></div>
         <img
@@ -20,11 +20,11 @@ function Settings() {
       </div>
 
       <div className="text-center mt-16">
-        <h1 className="text-3xl font-bold text-gray-800">{user.displayName}</h1>
-        <p className="text-gray-600 mt-2">{user.email}</p>
+        <h1 className="text-3xl font-bold ">{user.displayName}</h1>
+        <p className=" mt-2">{user.email}</p>
       </div>
 
-      <div className="w-full max-w-3xl mt-8 bg-white p-6 rounded-xl shadow-lg">
+      <div className="w-full max-w-3xl mt-8 bg-base-200 p-6 rounded-xl shadow-lg border">
         <Form className="flex flex-col gap-4">
           <FormInput
             label="Username"
@@ -41,12 +41,12 @@ function Settings() {
 
       <div className="mt-6 w-full max-w-3xl">
         {!isPending ? (
-          <button className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-all">
+          <button className="w-full bg-accent text-white py-3 rounded-lg hover:bg-purple-700 transition-all">
             Save
           </button>
         ) : (
           <button
-            className="w-full bg-green-500 text-white py-3 rounded-lg cursor-not-allowed opacity-75"
+            className="w-full bg-accent text-white py-3 rounded-lg cursor-not-allowed opacity-75"
             disabled
           >
             Saving...

@@ -6,9 +6,9 @@ import Navbar from "../components/Navbar";
 function MainLayout() {
   return (
     <>
-      <div className="flex justify-between bg-slate-300">
+      <div className="flex justify-between ">
         <UserNavbar />
-        <main className=" bg-slate-300 w-full p-10">
+        <main className=" bg-base-100 w-full p-10">
           <Navbar />
           <Outlet />
         </main>

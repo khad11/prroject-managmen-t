@@ -1,20 +1,24 @@
 import { useThemeToggle } from "../hooks/useThemeToggle";
 import { BsMoonStars } from "react-icons/bs";
 import { FiSun } from "react-icons/fi";
+import { Link } from "react-router-dom";
 function Navbar() {
-  const { changeTheme } = useThemeToggle();
+  const { changeTheme, theme } = useThemeToggle();
   return (
     <div>
-      <div className="navbar bg-base-100 rounded-xl mb-5">
+      <div className="navbar bg-base-200 rounded-xl mb-5 border  shadow-lg">
         <div className="navbar-start">
-          <a className="btn btn-ghost text-xl">KH</a>
+          <Link to="/" className="btn btn-ghost text-xl">
+            KHADI
+          </Link>
         </div>
 
-        <div className="navbar-end flex items-center">
+        <div className="navbar-end flex items-center ">
           <label className="flex cursor-pointer gap-2 justify-end">
             <FiSun className="w-4 h-4" />
             <input
               onChange={changeTheme}
+              // checked={theme === "nord"}
               type="checkbox"
               value="synthwave"
               className="toggle theme-controller toggle-xs"

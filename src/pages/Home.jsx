@@ -5,7 +5,6 @@ function Home() {
   return (
     <div className="flex flex-col items-center px-5">
       <h1 className="text-4xl font-bold text-teal-600 mb-10">Dashboard</h1>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px]">
         {documents &&
           documents.map((doc) => {
@@ -13,10 +12,10 @@ function Home() {
               <Link
                 to={`/about/${doc.id}`}
                 key={doc.id}
-                className="card bg-white w-full shadow-lg rounded-lg border border-gray-200 overflow-hidden"
+                className="card bg-base w-full shadow-xl rounded-lg border border-gray-200 overflow-hidden"
               >
                 <div className="card-body p-6">
-                  <h2 className="card-title text-xl font-semibold text-gray-800 mb-4">
+                  <h2 className="card-title text-xl font-semibold  mb-4">
                     {doc.name}
                   </h2>
                   <p className="text-gray-600 mb-4">

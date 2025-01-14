@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const themeFromLocalStorage = () => {
-  return localStorage.getItem("theme") || "winter";
+  return localStorage.getItem("theme") || "nord";
 };
 
 export function useThemeToggle() {
@@ -13,9 +13,7 @@ export function useThemeToggle() {
   }, [theme]);
 
   const changeTheme = () => {
-    setTheme((prev) => {
-      prev == "winter" ? "dracula" : "winter";
-    });
+    setTheme((prev) => (prev === "nord" ? "black" : "nord"));
   };
 
   return { changeTheme, theme };

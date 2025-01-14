@@ -109,7 +109,7 @@ function Create() {
       </h2>
       <Form
         method="post"
-        className="flex flex-col gap-7 max-w-[700px] w-full justify-center bg-white p-10 shadow-lg rounded-lg border border-gray-300"
+        className="flex flex-col gap-7 max-w-[700px] w-full justify-center bg-base-200 p-10 shadow-lg rounded-lg border border-gray-300"
       >
         <FormInput
           name="name"
@@ -121,9 +121,7 @@ function Create() {
         <FormInput label="Set Due Date" type="date" name="dueTo" />
         <label className="form-control">
           <div className="label">
-            <span className="label-text font-medium text-gray-700">
-              Project Type:
-            </span>
+            <span className="label-text font-medium">Project Type:</span>
           </div>
           <Select
             onChange={selectProjectType}
@@ -134,9 +132,7 @@ function Create() {
         </label>
         <label className="form-control">
           <div className="label">
-            <span className="label-text font-medium text-gray-700">
-              Assign Users:
-            </span>
+            <span className="label-text font-medium ">Assign Users:</span>
           </div>
           <Select
             onChange={selectUser}
@@ -148,7 +144,7 @@ function Create() {
         {isPending && (
           <div className="flex justify-end">
             <button
-              className=" py-3 px-6 mt-8 bg-teal-500 text-white rounded-lg font-semibold text-lg shadow-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-400 focus:outline-none transition-all duration-300"
+              className=" py-3 px-6 mt-8 bg-accent text-white rounded-lg font-semibold text-lg shadow-md hover:bg-purple-700 focus:ring-2 "
               type="submit"
               disabled
             >
@@ -159,7 +155,7 @@ function Create() {
         {!isPending && (
           <div className="flex justify-end">
             <button
-              className="py-3 px-6 mt-8 bg-teal-500 text-white rounded-lg font-semibold text-lg shadow-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-400 focus:outline-none transition-all duration-300"
+              className="py-3 px-6 mt-8 bg-accent  text-white rounded-lg font-semibold text-lg shadow-md hover:bg-purple-700 focus:ring-2 "
               type="submit"
             >
               Add Project

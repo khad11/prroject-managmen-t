@@ -17,7 +17,10 @@ function UserNavbar() {
   const { user } = useSelector((store) => store.user);
   const { documents } = useCollection("users");
   return (
-    <div className="bg-gradient-to-b from-slate-800 to-slate-600 min-h-screen py-10 rounded-tr-2xl rounded-br-2xl text-white flex flex-col shadow-lg">
+    <div
+      className="bg-base-300 min-h-screen py-10 rounded-tr-2xl rounded-br-2xl text-base-content
+ flex flex-col shadow-lg"
+    >
       <div className="w-[300px] mx-auto">
         {/* User Profile */}
         <div className="flex flex-col items-center mb-8">
@@ -35,8 +38,8 @@ function UserNavbar() {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-2 rounded-lg text-lg transition-all duration-500 ${
                   isActive
-                    ? "bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 text-white shadow-lg"
-                    : "hover:bg-gradient-to-r hover:from-slate-700 hover:via-slate-600 hover:to-slate-500"
+                    ? " bg-accent text-white shadow-lg"
+                    : "hover:bg-purple-300"
                 }`
               }
             >
@@ -49,8 +52,8 @@ function UserNavbar() {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-2 rounded-lg text-lg transition-all duration-500 ${
                   isActive
-                    ? "bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 text-white shadow-lg"
-                    : "hover:bg-gradient-to-r hover:from-slate-700 hover:via-slate-600 hover:to-slate-500"
+                    ? " bg-accent text-white shadow-lg"
+                    : "hover:bg-purple-300"
                 }`
               }
             >
@@ -63,8 +66,8 @@ function UserNavbar() {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-2 rounded-lg text-lg transition-all duration-500 ${
                   isActive
-                    ? "bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 text-white shadow-lg"
-                    : "hover:bg-gradient-to-r hover:from-slate-700 hover:via-slate-600 hover:to-slate-500"
+                    ? " bg-accent text-white shadow-lg"
+                    : "hover:bg-purple-300"
                 }`
               }
             >
@@ -77,7 +80,7 @@ function UserNavbar() {
       {/* Logout Button */}
       <div className="mt-auto mx-auto w-full px-6">
         <Button
-          className="w-full py-3 mt-8 bg-teal-500 text-white rounded-lg font-semibold text-lg shadow-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-400 focus:outline-none transition-all duration-300"
+          className="w-full py-3 mt-8 bg-accent text-white rounded-lg font-semibold text-lg shadow-md hover:bg-purple-700 focus:outline-none transition-all duration-300"
           onClick={logout}
         >
           Logout

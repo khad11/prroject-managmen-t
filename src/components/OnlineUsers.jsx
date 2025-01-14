@@ -4,7 +4,7 @@ function OnlineUsers() {
   const { documents } = useCollection("users");
 
   return (
-    <div className="bg-gradient-to-b from-slate-800 to-slate-600 min-h-screen p-10 rounded-tl-2xl rounded-bl-2xl text-white shadow-xl">
+    <div className="bg-base-300 min-h-screen p-10 rounded-tl-2xl rounded-bl-2xl shadow-xl">
       <div className="w-[240px] mx-auto">
         <h1 className="mb-8 text-center text-2xl font-bold tracking-wide">
           Online Users
@@ -14,10 +14,8 @@ function OnlineUsers() {
             documents.map((doc) => (
               <li
                 key={doc.id}
-                className={`flex items-center gap-4 p-4 rounded-lg shadow-lg ${
-                  doc.online
-                    ? "bg-gradient-to-r from-green-400 via-green-500 to-green-600"
-                    : "bg-gradient-to-r from-red-400 via-red-500 to-red-600"
+                className={`flex items-center gap-4 p-4 rounded-lg shadow-lg   ${
+                  doc.online ? " bg-accent" : "bg-warning"
                 }`}
               >
                 <div className="relative">
