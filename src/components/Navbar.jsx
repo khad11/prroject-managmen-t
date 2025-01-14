@@ -18,7 +18,7 @@ function Navbar() {
             <FiSun className="w-4 h-4" />
             <input
               onChange={changeTheme}
-              // checked={theme === "nord"}
+              checked={theme === "black"}
               type="checkbox"
               value="synthwave"
               className="toggle theme-controller toggle-xs"
