@@ -48,7 +48,7 @@ function Register() {
   }, [singupActionData]);
 
   return (
-    <div className="h-screen grid place-items-center w-full bg-green-50">
+    <div className="h-screen grid place-items-center w-full bg-base-100">
       <Form method="post" className="max-w-96 mx-auto w-full ">
         <h2 className="text-4xl font-bold text-center uppercase my-5">
           Register

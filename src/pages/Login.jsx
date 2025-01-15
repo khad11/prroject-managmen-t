@@ -40,9 +40,11 @@ function Login() {
     }
   }, [loginActionData]);
   return (
-    <div className="h-screen grid place-items-center w-full bg-green-50">
+    <div className="h-screen grid place-items-center w-full bg-base-100">
       <Form method="post" className="max-w-96 mx-auto w-full ">
-        <h2 className="text-4xl font-bold text-center uppercase my-5">Login</h2>
+        <h2 className="text-4xl font-bold text-center uppercase my-5 text-green-600">
+          Login
+        </h2>
 
         <FormInput
           type="email"
@@ -63,12 +65,15 @@ function Login() {
 
         <div className="my-5">
           {!isPending && (
-            <button className="btn btn-success text-white btn-block">
+            <button className="btn btn-success text-base-100 btn-block">
               Login
             </button>
           )}
           {isPending && (
-            <button className="btn btn-success text-white btn-block" disabled>
+            <button
+              className="btn btn-success text-base-100 btn-block"
+              disabled
+            >
               Loading...
             </button>
           )}
