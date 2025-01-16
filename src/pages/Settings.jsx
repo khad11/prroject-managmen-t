@@ -19,24 +19,17 @@ function Settings() {
         />
       </div>
 
-      <div className="text-center mt-16">
-        <h1 className="text-3xl font-bold ">{user.displayName}</h1>
-        <p className=" mt-2">{user.email}</p>
-      </div>
-
-      <div className="w-full max-w-3xl mt-8 bg-base-200 p-6 rounded-xl shadow-lg border">
-        <Form className="flex flex-col gap-4">
-          <FormInput
-            label="Username"
-            type="text"
-            placeholder="Enter your username"
-          />
-          <FormInput
-            label="Email"
-            type="email"
-            placeholder="Enter your email"
-          />
-        </Form>
+      <div className="w-full max-w-3xl mt-36 bg-base-200 p-6 flex flex-col gap-4 items-center">
+        <div className="w-full bg-base-300  p-4 rounded-lg shadow-md">
+          <h1 className="text-xl font-semibold">
+            Your Name: <span className="font-normal">{user.displayName}</span>
+          </h1>
+        </div>
+        <div className="w-full bg-base-300  p-4 rounded-lg shadow-md">
+          <p className="text-xl font-semibold">
+            Your Email: <span className="font-normal">{user.email}</span>
+          </p>
+        </div>
       </div>
 
       <div className="mt-6 w-full max-w-3xl">
